@@ -23,7 +23,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <MainHeaderBackground />
         <MainHeader />
         {children}
       </body>

@@ -1,12 +1,22 @@
 import Link from "next/link";
-
+import classes from "./page.module.css";
 export default function Home() {
   return (
-    <div>
-      <h1>Home</h1>
-      <Link href="meals">Home</Link>
-      <Link href="community">Community</Link>
-      <Link href="meals/1">Meals number 1</Link>
-    </div>
+    <>
+      <header className={classes.header}>
+        <div classNane={classes.sliceshow}></div>
+        <div>
+          <div className={classes.hero}>
+            <h1>NextLevel food for next level Foody</h1>
+            <p>taste & share food from all the world.</p>
+          </div>
+          <div className={classes.cta}>
+            <Link href="/community">Join the Community</Link>
+            <Link href="/meals">Explore Meals</Link>
+          </div>
+        </div>
+      </header>
+      <main></main>
+    </>
   );
 }
