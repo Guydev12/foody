@@ -1,18 +1,12 @@
-"use client";
-import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
-  const [showMessage, setShowMessage] = useState(false);
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowMessage(true);
-    }, 2000);
-    return () => clearInterval(timer);
-  }, []);
   return (
     <div>
-      <h1>HOME PAGE GUIVENS</h1>
-      {showMessage && <p>hello home</p>}
+      <h1>Home</h1>
+      <Link href="meals">Home</Link>
+      <Link href="community">Community</Link>
+      <Link href="meals/1">Meals number 1</Link>
     </div>
   );
 }
